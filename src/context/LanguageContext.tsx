@@ -16,7 +16,7 @@ const dictionary = {
     hero: {
       title: "María González Herrero",
       subtitle:
-        "Desarrollo soluciones de IA, seguridad y automatización en Python y JavaScript.",
+        "Me gusta crear aplicaciones que simplifiquen procesos complejos: desde pentesting automatizado hasta plataformas web con IA.",
       badge: "AI · Cybersecurity · Automation",
       ctaProjects: "Ver proyectos",
       ctaResume: "Descargar CV",
@@ -79,7 +79,7 @@ const dictionary = {
     hero: {
       title: "María González Herrero",
       subtitle:
-        "I build AI, security and automation solutions in Python and JavaScript.",
+        "I enjoy building applications that simplify complex processes—from automated pentesting to AI-powered web platforms.",
       badge: "AI · Cybersecurity · Automation",
       ctaProjects: "View projects",
       ctaResume: "Download resume",
