@@ -112,6 +112,22 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+/* Asegurar que los títulos dentro de las cards se vean bien en ambos temas */
+.portfolio-card .card-body h1,
+.portfolio-card .card-body h2,
+.portfolio-card .card-body h3,
+.portfolio-card .card-body h4,
+.portfolio-card .card-body h5,
+.portfolio-card .card-body h6 {
+  color: var(--text); /* claro en dark, oscuro en light */
+}
+
+/* Y el texto de párrafos y listas que use sección de contenido */
+.portfolio-card .card-body p,
+.portfolio-card .card-body li {
+  color: var(--muted); /* gris legible en ambos temas */
+}
+
 /* Marca de la navbar */
 .navbar-portfolio .navbar-brand {
   color: var(--text);              /* usa el color de texto del tema */

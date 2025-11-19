@@ -18,6 +18,8 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xqanqzrq";
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
@@ -29,9 +31,22 @@ export default function ContactForm() {
     try {
       setStatus("sending");
 
-      // Aquí iría la llamada real a tu API o Formspree.
-      // Por ahora solo simulamos un delay:
-      await new Promise((res) => setTimeout(res, 900));
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Formspree error");
+      }
 
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
@@ -40,6 +55,7 @@ export default function ContactForm() {
       setStatus("error");
     }
   };
+
 
   return (
     <form className="row g-3" onSubmit={handleSubmit}>
