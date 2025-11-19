@@ -1,0 +1,34 @@
+[
+  {
+    "id": "dashboard",
+    "category": "frontend",
+    "thumb": "/thumbs/dashboard.png",
+    "stack": ["React", "Vite", "Firebase Hosting"],
+    "github": "https://github.com/mgh99/Project-Dashboard-Firebase",
+    "demo": "https://dashboard-vznx.firebaseapp.com/"
+  },
+  {
+    "id": "glitch",
+    "category": "ai_security",
+    "thumb": "/thumbs/glitch.png",
+    "stack": ["Python", "FastAPI", "Docker", "LLM"],
+    "github": "/docs/glitch-ai-tfm.pdf",
+    "demo": "https://youtu.be/Qr-GMAvuvzI"
+  },
+  {
+    "id": "app_field_service",
+    "category": "app",
+    "thumb": "/thumbs/santelmo.png",
+    "stack": ["Python", "Firebase"],
+    "github": "/projects/cuaderno-de-campo",
+    "demo": "#"
+  },
+  {
+    "id": "dendrite_spines",
+    "category": "ai_security",
+    "thumb": "/thumbs/espina_dendritica.png",
+    "stack": ["Python", "U-Net", "TensorFlow"],
+    "github": "/docs/espinas-dendriticas-tfg.pdf",
+    "demo": "#"
+  }
+]

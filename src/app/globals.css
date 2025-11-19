@@ -1,0 +1,447 @@
+/* src/app/globals.css */
+
+:root[data-theme="light"] {
+  --bg: #f5f5f7;
+  --bg-card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #f472b6;      /* rosa principal */
+  --accent-soft: #fdf2f8; /* rosa muy suave */
+  --accent-strong: #db2777;
+}
+
+:root[data-theme="dark"] {
+  --bg: #050816;
+  --bg-card: #0b1220;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --accent: #f472b6;
+  --accent-soft: #4b1640;
+  --accent-strong: #f9a8d4;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* === Fondo global con estética de código === */
+body.code-background {
+  /* degradado suave tipo el de la tarjeta de skills */
+  background:
+    radial-gradient(circle at top left, rgba(244,114,182,0.20), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(59,130,246,0.22), transparent 55%),
+    var(--bg);
+  position: relative;
+}
+
+/* capa con “código” muy suave por detrás de todo */
+body.code-background::before {
+  content:
+    "// glitch_ai stack\\A"
+    "const techStack = {\\A"
+    "  frontend: [\"React\", \"Next.js\", \"Vite\"],\\A"
+    "  backend: [\"Python\", \"FastAPI\"],\\A"
+    "  ai_ml: [\"LLMs\", \"U-Net\"],\\A"
+    "  devops: [\"Docker\", \"Linux\"],\\A"
+    "  automation: [\"Python scripts\", \"CLI tools\"],\\A"
+    "};";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.78rem;
+  white-space: pre;
+  color: var(--muted);
+  mix-blend-mode: soft-light;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.accent-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.section-muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Cards del portfolio */
+
+.portfolio-card {
+  background-color: var(--bg-card);
+  border-color: var(--border);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15,23,42,0.35);
+  border-color: var(--accent);
+}
+
+.navbar-portfolio {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Marca de la navbar */
+.navbar-portfolio .navbar-brand {
+  color: var(--text);              /* usa el color de texto del tema */
+}
+
+/* .dev hereda este color, MGH sigue con el inline rosa */
+.navbar-portfolio .navbar-brand span {
+  vertical-align: middle;
+}
+
+/* Por si quieres que el .dev sea aún más claro en dark */
+[data-theme="dark"] .navbar-portfolio .navbar-brand {
+  color: #ffffff;
+}
+
+/* Links del menú en general */
+.navbar-portfolio .nav-link {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Hover en cualquier tema */
+.navbar-portfolio .nav-link:hover,
+.navbar-portfolio .nav-link:focus {
+  color: var(--accent);
+}
+
+/* En modo oscuro que sean claritos */
+[data-theme="dark"] .navbar-portfolio .nav-link {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .navbar-portfolio .nav-link:hover,
+[data-theme="dark"] .navbar-portfolio .nav-link:focus {
+  color: var(--accent);
+}
+
+.hero-highlight {
+  color: var(--accent-strong);
+}
+
+.badge-tech {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background-color: rgba(15,23,42,0.02);
+  font-size: 0.75rem;
+}
+
+/* Small helpers */
+
+.text-muted-soft {
+  color: var(--muted);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-card);
+}
+
+/* === Skills - terminal style === */
+
+.skills-terminal {
+  background: radial-gradient(circle at top left, rgba(244,114,182,0.12), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(59,130,246,0.16), transparent 55%),
+              var(--bg-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  padding: 1.75rem 1.9rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+.skills-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.skills-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.skills-dot.red {
+  background: #f97373;
+}
+.skills-dot.yellow {
+  background: #facc15;
+}
+.skills-dot.green {
+  background: #4ade80;
+}
+
+.skills-terminal-title {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.skills-line {
+  white-space: pre-wrap;
+}
+
+.skills-key {
+  color: var(--accent-strong);
+  font-weight: 500;
+}
+
+.skills-brace {
+  color: #9ca3af;
+}
+
+.skills-string {
+  color: #a5b4fc;
+}
+
+.skills-comment {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* === Skills – square cards + chips === */
+
+.skill-square {
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  padding: 1.6rem 1.8rem;
+  min-height: 190px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-square::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(244, 114, 182, 0.18), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none;
+}
+
+.skill-square:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.4);
+  border-color: var(--accent);
+}
+
+.skill-square:hover::after {
+  opacity: 1;
+}
+
+.skill-square-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 0.4rem;
+}
+
+.skill-square-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+.skill-chip {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.18rem 0.65rem;
+  font-size: 0.78rem;
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.02);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+/* que las badges de tech se vean un poco más “chip” */
+.badge-tech {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.55rem;
+  font-size: 0.75rem;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.6rem;
+  padding: 2rem;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.28);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 22px 50px rgba(244, 114, 182, 0.22);
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(244,114,182,0.14), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.contact-card:hover::after {
+  opacity: 1;
+}
+
+/* === Footer (glass style) === */
+
+.site-footer {
+  margin-top: 5rem;
+  padding: 1.3rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .site-footer {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer-text {
+  color: var(--text);
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+.back-to-top-btn {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.back-to-top-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.skill-square-title {
+  font-size: 1rem;              /* antes 0.9 */
+  font-weight: 800;             /* más contundente */
+  letter-spacing: 0.1em;
+}
+
+.skill-square-subtitle {
+  font-size: 0.9rem;            /* antes 0.85 */
+  font-weight: 500;             /* más legible */
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.skill-chip {
+  font-size: 0.8rem;            /* antes 0.78 */
+  font-weight: 500;             /* para que no se pierda */
+}
+
+/* ---- BADGE TECH (modo claro) ---- */
+.badge-tech {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #ffffff;         /* FONDO BLANCO EN MODO CLARO */
+  color: #333;                 /* TEXTO OSCURO */
+  user-select: none;
+}
+
+/* ---- BADGE TECH (modo oscuro) ---- */
+[data-theme="dark"] .badge-tech {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #f1f1f1;
+}
+
+/* Default (modo claro) */
+.portfolio-card .card-title {
+  color: #222;
+}
+.portfolio-card .card-body small,
+.portfolio-card .card-body .fw-semibold {
+  color: #444;
+}
+
+/* MODO OSCURO */
+[data-theme="dark"] .portfolio-card .card-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .portfolio-card small,
+[data-theme="dark"] .portfolio-card .fw-semibold {
+  color: #e8e8e8 !important;
+}
+
+
+
+
