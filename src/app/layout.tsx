@@ -1,6 +1,8 @@
 /* src/app/layout.tsx */
 import Navbar from "@/components/Navbar";
 import { LangProvider } from "@/context/LanguageContext";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
@@ -28,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           {children}
         </LangProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
