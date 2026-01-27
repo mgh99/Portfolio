@@ -3,6 +3,7 @@
 
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
+import PublicationsSection from "@/components/PublicationsSection";
 import SkillsSection from "@/components/SkillsSection";
 import { useLang } from "@/context/LanguageContext";
 import { useState } from "react";
@@ -52,7 +53,7 @@ export default function Home() {
 
 
       {/* Projects */}
-            <section id="projects" className="mt-5">
+        <section id="projects" className="mt-5">
         <h2 className="section-title">{t.sections.projectsTitle}</h2>
 
         {/* filtros estilo pills */}
@@ -84,6 +85,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Publications */}
+      <PublicationsSection />
 
       {/* Contact */}
       <section id="contact" className="mt-5 mb-4">

@@ -11,8 +11,10 @@ const dictionary = {
       about: "Sobre mí",
       projects: "Proyectos",
       skills: "Tecnologías",
+      publications: "Publicaciones",
       contact: "Contacto",
     },
+
     hero: {
       title: "María González Herrero",
       subtitle:
@@ -21,6 +23,7 @@ const dictionary = {
       ctaProjects: "Ver proyectos",
       ctaResume: "Descargar CV",
     },
+
     sections: {
       projectsTitle: "Mis proyectos",
       projectsSubtitle: "Selección de herramientas y aplicaciones que he creado.",
@@ -35,10 +38,14 @@ const dictionary = {
       skillsOps: "DevOps & otros",
       skillsDevOpsDesc: "Despliegues, herramientas y automatización alrededor del código.",
 
+      publicationsTitle: "Publicaciones & Research",
+      publicationsSubtitle: "Producción académica y trabajos revisados por pares.",
+
       contactTitle: "Contacto",
       contactSubtitle:
         "¿Te interesa colaborar o saber más sobre alguno de los proyectos?",
     },
+
     projects: {
       dashboard: {
         title: "Dashboard de trabajos",
@@ -57,6 +64,33 @@ const dictionary = {
         subtitle: "U-Net para segmentación de espinas dendríticas",
       },
     },
+
+    publications: {
+      paperTitle: "IEEE CAI 2026 — Artículo de Conferencia",
+      paperSubtitle: "Investigación en ciberseguridad basada en IA, desarrollada como extensión de mi TFM.",
+
+      accepted: "Aceptado",
+      published: "Publicado",
+      under_review: "En revisión",
+
+      details: "Detalles",
+      venue: "Conferencia",
+
+      venueLabel: "Conferencia",
+      whenWhereLabel: "Fecha / Lugar",
+      statusLabel: "Estado",
+      affiliationsLabel: "Afiliaciones",
+      supervisorsLabel: "Supervisores / Coautores",
+      noteLabel: "Nota",
+
+      noteAfterPublication: "La referencia completa estará disponible tras la publicación.",
+    },
+
+    common: {
+      close: "Cerrar",
+    },
+
+
     contact: {
       emailLabel: "Email",
       linksLabel: "Enlaces",
@@ -74,8 +108,10 @@ const dictionary = {
       about: "About",
       projects: "Projects",
       skills: "Skills",
+      publications: "Publications",
       contact: "Contact",
     },
+
     hero: {
       title: "María González Herrero",
       subtitle:
@@ -84,6 +120,7 @@ const dictionary = {
       ctaProjects: "View projects",
       ctaResume: "Download resume",
     },
+
     sections: {
       projectsTitle: "Projects",
       projectsSubtitle: "Selection of tools and applications I’ve built.",
@@ -98,10 +135,14 @@ const dictionary = {
       skillsOps: "DevOps & other",
       skillsDevOpsDesc: "Deployments, tooling and automation around code.",
 
+      publicationsTitle: "Publications & Research",
+      publicationsSubtitle: "Peer-reviewed outputs and academic work.",
+
       contactTitle: "Contact",
       contactSubtitle:
         "Interested in collaborating or learning more about a project?",
     },
+
     projects: {
       dashboard: {
         title: "Work Dashboard",
@@ -120,6 +161,32 @@ const dictionary = {
         subtitle: "U-Net for dendritic spine segmentation",
       }
     },
+
+    publications: {
+      paperTitle: "IEEE CAI 2026 — Conference Paper",
+      paperSubtitle: "AI-driven cybersecurity research, developed as an extension of my MSc dissertation.",
+
+      accepted: "Accepted",
+      published: "Published",
+      under_review: "Under review",
+
+      details: "Details",
+      venue: "Venue",
+
+      venueLabel: "Venue",
+      whenWhereLabel: "When / Where",
+      statusLabel: "Status",
+      affiliationsLabel: "Affiliations",
+      supervisorsLabel: "Supervisors / Co-authors",
+      noteLabel: "Note",
+
+      noteAfterPublication: "Full citation available after publication.",
+    },
+
+    common: {
+      close: "Close",
+    },
+
     contact: {
       emailLabel: "Email",
       linksLabel: "Links",
@@ -134,8 +201,8 @@ const dictionary = {
   },
 } as const;
 
-// 👇 tipo de un idioma concreto (ambos tienen la misma forma)
-type Dict = (typeof dictionary)[Lang];
+// tipo de un idioma concreto (ambos tienen la misma forma)
+export type Dict = (typeof dictionary)[Lang];
 
 const LANG_KEY = "mgh-lang";
 
