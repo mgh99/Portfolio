@@ -14,7 +14,7 @@ import projects from "@/data/projects.json";
 export default function Home() {
   const { t, lang } = useLang();
 
-  const [filter, setFilter] = useState<"all" | "frontend" | "ai_security" | "app">("all");
+  const [filter, setFilter] = useState<"all" | "frontend" | "ai_security" | "app" | "data_ai">("all");
 
   const filteredProjects =
       filter === "all" ? projects : projects.filter((p: any) => p.category === filter);
@@ -56,13 +56,14 @@ export default function Home() {
         <section id="projects" className="mt-5">
         <h2 className="section-title">{t.sections.projectsTitle}</h2>
 
-        {/* filtros estilo pills */}
+        {/* filtros estilo pills*/}
         <div className="d-flex gap-2 mb-4 flex-wrap">
           {[
-            { id: "all", label: "All" },
-            { id: "frontend", label: "Frontend" },
-            { id: "ai_security", label: "AI & Security" },
-            { id: "app", label: "Apps" }
+            { id: "all", label: t.sections.projectFilters.all },
+            { id: "frontend", label: t.sections.projectFilters.frontend },
+            { id: "ai_security", label: t.sections.projectFilters.ai_security },
+            { id: "app", label: t.sections.projectFilters.app },
+            { id: "data_ai", label: t.sections.projectFilters.data_ai }
           ].map((f) => (
             <button
               key={f.id}
@@ -136,8 +137,6 @@ export default function Home() {
           </div>
 
           <div className="d-flex align-items-center gap-3">
-            <span className="site-footer-text">Built with Next.js & Bootstrap</span>
-
             <a href="#top" className="back-to-top-btn">
               ↑
             </a>

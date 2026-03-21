@@ -44,6 +44,14 @@ const dictionary = {
       contactTitle: "Contacto",
       contactSubtitle:
         "¿Te interesa colaborar o saber más sobre alguno de los proyectos?",
+
+      projectFilters: {
+        all: "Todos",
+        frontend: "Frontend",
+        ai_security: "IA & ciberseguridad",
+        app: "Apps",
+        data_ai: "IA & datos",
+      },
     },
 
     projects: {
@@ -62,6 +70,10 @@ const dictionary = {
       dendrite_spines: {
         title: "Detección de espinas dendríticas",
         subtitle: "U-Net para segmentación de espinas dendríticas",
+      },
+      macro_intel:{
+        title: "Macro Intel",
+        subtitle: "Información macroeconómica estructurada procedente de fuentes de datos internacionales",
       },
     },
 
@@ -141,6 +153,14 @@ const dictionary = {
       contactTitle: "Contact",
       contactSubtitle:
         "Interested in collaborating or learning more about a project?",
+
+      projectFilters: {
+        all: "All",
+        frontend: "Frontend",
+        ai_security: "AI & Security",
+        app: "Apps",
+        data_ai: "AI & Data",
+      },
     },
 
     projects: {
@@ -159,7 +179,11 @@ const dictionary = {
       dendrite_spines: {
         title: "Dendritic spine detection",
         subtitle: "U-Net for dendritic spine segmentation",
-      }
+      },
+      macro_intel:{
+        title: "Macro Intel",
+        subtitle: "Structured macroeconomic intelligence from global data sources",
+      },
     },
 
     publications: {

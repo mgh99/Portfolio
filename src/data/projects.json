@@ -30,5 +30,14 @@
     "stack": ["Python", "U-Net", "TensorFlow"],
     "github": "/docs/espinas-dendriticas-tfg.pdf",
     "demo": "#"
+  },
+  {
+    "id": "macro_intel",
+    "category": "data_ai",
+    "thumb": "/thumbs/macro_intel.png",
+    "stack": ["Python", "Pandas", "FastAPI", "LLM"],
+    "github": "https://github.com/mgh99/macro_cosas/tree/main",
+    "demo": "https://macro-cosas-4t2079blu-marias-projects-b5a6cca6.vercel.app/"
   }
+  
 ]
