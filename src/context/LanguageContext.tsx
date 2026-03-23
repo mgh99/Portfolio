@@ -12,6 +12,7 @@ const dictionary = {
       projects: "Proyectos",
       skills: "Tecnologías",
       publications: "Publicaciones",
+      lab: "Laboratorio",
       contact: "Contacto",
     },
 
@@ -121,6 +122,7 @@ const dictionary = {
       projects: "Projects",
       skills: "Skills",
       publications: "Publications",
+      lab: "Lab",
       contact: "Contact",
     },
 

@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-portfolio sticky-top">
       <div className="container">
-        <a className="navbar-brand fw-bold" href="#top">
+        <a className="navbar-brand fw-bold" href="/#top">
           <span style={{ color: "var(--accent-strong)" }}>MGH</span>
           <span className="ms-1">.dev</span>
         </a>
@@ -31,27 +31,32 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="mainNav">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
             <li className="nav-item">
-              <a className="nav-link" href="#about">
+              <a className="nav-link" href="/#about">
                 {t.nav.about}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#projects">
+              <a className="nav-link" href="/#projects">
                 {t.nav.projects}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#skills">
+              <a className="nav-link" href="/#skills">
                 {t.nav.skills}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#publications">
+              <a className="nav-link" href="/#publications">
                 {t.nav.publications}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <a className="nav-link" href="/lab">
+                {t.nav.lab}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#contact">
                 {t.nav.contact}
               </a>
             </li>
