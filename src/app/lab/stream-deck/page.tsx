@@ -2,6 +2,7 @@
 "use client";
 
 import { useLang } from "@/context/LanguageContext";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "./stream-deck.css";
@@ -55,13 +56,13 @@ export default function StreamDeckPage() {
           {/* Cover photos */}
           <div className="sd-cover">
             <div className="sd-cover-main" onClick={() => setActivePhoto(PHOTOS[0])}>
-              <img src={PHOTOS[0]} alt="Stream deck" />
+              <Image src={PHOTOS[0]} alt="Stream deck" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, 55vw" priority />
             </div>
             <div className="sd-cover-side" onClick={() => setActivePhoto(PHOTOS[1])}>
-              <img src={PHOTOS[1]} alt="Stream deck detalle" />
+              <Image src={PHOTOS[1]} alt="Stream deck detalle" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 22vw" />
             </div>
             <div className="sd-cover-side" onClick={() => setActivePhoto(PHOTOS[2])}>
-              <img src={PHOTOS[2]} alt="Stream deck keycaps" />
+              <Image src={PHOTOS[2]} alt="Stream deck keycaps" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 22vw" />
             </div>
           </div>
 
@@ -159,7 +160,7 @@ export default function StreamDeckPage() {
                 className="sd-step-photo"
                 onClick={() => setActivePhoto(PHOTOS[3])}
               >
-                <img src={PHOTOS[3]} alt="Carcasa impresa" />
+                <Image src={PHOTOS[3]} alt="Carcasa impresa" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
             </div>
             <div className="sd-step reverse">
@@ -167,7 +168,7 @@ export default function StreamDeckPage() {
                 className="sd-step-photo"
                 onClick={() => setActivePhoto(PHOTOS[4])}
               >
-                <img src={PHOTOS[4]} alt="Keycaps con diseño personalizado" />
+                <Image src={PHOTOS[4]} alt="Keycaps con diseño personalizado" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
               <div>
                 <p className="sd-step-label">{isEs ? "Keycaps personalizadas" : "Custom keycaps"}</p>
@@ -276,7 +277,7 @@ export default function StreamDeckPage() {
                 className="sd-step-photo"
                 onClick={() => setActivePhoto(PHOTOS[5])}
               >
-                <img src={PHOTOS[5]} alt="Montaje final" />
+                <Image src={PHOTOS[5]} alt="Montaje final" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
               <div>
                 <p className="sd-prose">
@@ -311,7 +312,7 @@ export default function StreamDeckPage() {
                   className="sd-gallery-item"
                   onClick={() => setActivePhoto(src)}
                 >
-                  <img src={src} alt={`Stream deck ${i + 1}`} />
+                  <Image src={src} alt={`Stream deck ${i + 1}`} fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 33vw, 25vw" />
                 </div>
               ))}
             </div>
